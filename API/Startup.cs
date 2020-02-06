@@ -1,3 +1,4 @@
+using API.services.CharacterService;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -18,6 +19,7 @@ namespace dotnet_rpg
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddScoped<ICharacterService, CharacterService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
