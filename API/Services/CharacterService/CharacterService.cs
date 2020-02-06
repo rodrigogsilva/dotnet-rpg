@@ -7,7 +7,7 @@ namespace API.services.CharacterService
     public class CharacterService : ICharacterService
     {
         private static List<Character> characters = new List<Character> {
-            new Character(),
+            new Character { Id = Guid.NewGuid()},
             new Character { Id = Guid.NewGuid(), Name = "Sam"}
         };
 
